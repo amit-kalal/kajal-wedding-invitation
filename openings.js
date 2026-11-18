@@ -9,8 +9,8 @@
  * for the engine to read under the greeting and the hint.
  */
 (() => {
-  // With CORS, so the relief and the seal can read pixels when the art comes from the asset host.
-  const load = (src) => new Promise((ok, bad) => { const i = new Image(); i.decoding = "async"; i.crossOrigin = "anonymous"; i.onload = () => ok(i); i.onerror = bad; i.src = src; });
+  // Art loader for local / offline assets
+  const load = (src) => new Promise((ok, bad) => { const i = new Image(); i.decoding = "async"; i.onload = () => ok(i); i.onerror = bad; i.src = src; });
   const el = (tag, cls, parent) => { const e = document.createElement(tag); if (cls) e.className = cls; parent?.appendChild(e); return e; };
   const wait = (ms) => new Promise((r) => setTimeout(r, ms));
   const ease = (u) => (u < 0.5 ? 4 * u * u * u : 1 - Math.pow(-2 * u + 2, 3) / 2);
@@ -765,7 +765,7 @@
     const end = el("img", "op-end", box);
     end.src = base + (o.last || theme.art.open || o.first); end.alt = "";
     const still = el("img", "op-still", box);
-    still.crossOrigin = "anonymous"; still.src = base + (o.first || theme.art.closed); still.alt = "";
+    still.src = base + (o.first || theme.art.closed); still.alt = "";
     const btn = el("button", "op-tap", box);
     btn.type = "button";
     btn.setAttribute("aria-label", label);

@@ -21,7 +21,7 @@
 (() => {
   const el = (tag, cls, parent) => { const e = document.createElement(tag); if (cls) e.className = cls; parent?.appendChild(e); return e; };
   const wait = (ms) => new Promise((r) => setTimeout(r, ms));
-  const load = (src) => new Promise((ok, bad) => { const i = new Image(); i.decoding = "async"; i.crossOrigin = "anonymous"; i.onload = () => ok(i); i.onerror = bad; i.src = src; });
+  const load = (src) => new Promise((ok, bad) => { const i = new Image(); i.decoding = "async"; i.onload = () => ok(i); i.onerror = bad; i.src = src; });
   const ready = (img) => new Promise((ok, bad) => { if (img.complete && img.naturalWidth) ok(img); else { img.addEventListener("load", () => ok(img), { once: true }); img.addEventListener("error", bad, { once: true }); } });
   const clamp01 = (v) => Math.max(0, Math.min(1, v));
   const pct = (v) => `${(v * 100).toFixed(3)}%`;
@@ -264,7 +264,7 @@
       <div class="ks-fill" aria-hidden="true"></div>
       <div class="ks-mirror top" aria-hidden="true"></div><div class="ks-mirror bottom" aria-hidden="true"></div>
       <div class="ks-box">
-        <img class="ks-art" src="${a.esc(last)}" alt="" crossorigin="anonymous" decoding="async">
+        <img class="ks-art" src="${a.esc(last)}" alt="" decoding="async">
         ${o.loop ? `<video class="ks-loop" muted playsinline loop preload="none" aria-hidden="true"></video>` : ""}
         <div class="ks-glints" aria-hidden="true"></div>
         ${o.fireworks ? `<canvas class="ks-fw" aria-hidden="true"></canvas>` : ""}
@@ -395,7 +395,7 @@
     const end = el("img", "op-end", box);
     end.src = base + (o.last || theme.art.hero); end.alt = "";
     const first = el("img", "op-still", box);
-    first.crossOrigin = "anonymous"; first.src = base + (o.first || theme.art.closed); first.alt = "";
+    first.src = base + (o.first || theme.art.closed); first.alt = "";
     const sky = o.fireworks && !reduced && !still() ? fireworks(el("canvas", "ks-fw", box), o.fireworks) : null;
     let lowOn = false;
     // The words that will be written onto the card: the first screen's own, in the same place.
