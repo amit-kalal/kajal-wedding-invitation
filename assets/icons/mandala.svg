@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="mandalaGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fdf4ba"/>
+      <stop offset="50%" stop-color="#d4af37"/>
+      <stop offset="100%" stop-color="#aa771c"/>
+    </linearGradient>
+  </defs>
+
+  <g stroke="url(#mandalaGold)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.85">
+    <!-- Center Rings -->
+    <circle cx="200" cy="200" r="15"/>
+    <circle cx="200" cy="200" r="28" stroke-dasharray="2 4"/>
+    <circle cx="200" cy="200" r="45"/>
+    <circle cx="200" cy="200" r="75"/>
+    <circle cx="200" cy="200" r="110" stroke-dasharray="3 3"/>
+    <circle cx="200" cy="200" r="145"/>
+    <circle cx="200" cy="200" r="185"/>
+
+    <!-- 8 Inner Petals -->
+    <!-- 0 deg -->
+    <path d="M 200 155 C 190 170, 190 185, 200 200 C 210 185, 210 170, 200 155 Z"/>
+    <!-- 45 deg -->
+    <path d="M 232 168 C 218 178, 210 190, 200 200 C 215 200, 228 190, 232 168 Z"/>
+    <!-- 90 deg -->
+    <path d="M 245 200 C 230 190, 215 190, 200 200 C 215 210, 230 210, 245 200 Z"/>
+    <!-- 135 deg -->
+    <path d="M 232 232 C 228 215, 215 205, 200 200 C 210 215, 218 228, 232 232 Z"/>
+    <!-- 180 deg -->
+    <path d="M 200 245 C 210 230, 210 215, 200 200 C 190 215, 190 230, 200 245 Z"/>
+    <!-- 225 deg -->
+    <path d="M 168 232 C 182 228, 190 215, 200 200 C 185 200, 172 215, 168 232 Z"/>
+    <!-- 270 deg -->
+    <path d="M 155 200 C 170 210, 185 210, 200 200 C 185 190, 170 190, 155 200 Z"/>
+    <!-- 315 deg -->
+    <path d="M 168 168 C 172 185, 185 195, 200 200 C 190 185, 182 172, 168 168 Z"/>
+
+    <!-- 16 Outer Scallops / Lotus Peaks -->
+    <!-- Top & Bottom Cardinals -->
+    <path d="M 200 55 C 180 85, 165 110, 200 145 C 235 110, 220 85, 200 55 Z"/>
+    <path d="M 200 345 C 180 315, 165 290, 200 255 C 235 290, 220 315, 200 345 Z"/>
+    <path d="M 55 200 C 85 180, 110 165, 145 200 C 110 235, 85 220, 55 200 Z"/>
+    <path d="M 345 200 C 315 180, 290 165, 255 200 C 290 235, 315 220, 345 200 Z"/>
+
+    <!-- Diagonal Peaks -->
+    <path d="M 98 98 C 115 125, 135 140, 161 161 C 140 135, 125 115, 98 98 Z"/>
+    <path d="M 302 98 C 285 125, 265 140, 239 161 C 260 135, 275 115, 302 98 Z"/>
+    <path d="M 98 302 C 115 275, 135 260, 161 239 C 140 265, 125 285, 98 302 Z"/>
+    <path d="M 302 302 C 285 275, 265 260, 239 239 C 260 265, 275 285, 302 302 Z"/>
+
+    <!-- Fine Point Dots at outer tips -->
+    <circle cx="200" cy="55" r="3" fill="url(#mandalaGold)"/>
+    <circle cx="200" cy="345" r="3" fill="url(#mandalaGold)"/>
+    <circle cx="55" cy="200" r="3" fill="url(#mandalaGold)"/>
+    <circle cx="345" cy="200" r="3" fill="url(#mandalaGold)"/>
+  </g>
+</svg>

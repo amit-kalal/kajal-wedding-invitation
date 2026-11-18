@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 400" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="goldArch" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff2b2"/>
+      <stop offset="35%" stop-color="#d4af37"/>
+      <stop offset="70%" stop-color="#aa771c"/>
+      <stop offset="100%" stop-color="#f5e08b"/>
+    </linearGradient>
+    <filter id="archShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Outer Border -->
+  <rect x="6" y="6" width="308" height="388" rx="8" stroke="url(#goldArch)" stroke-width="2" fill="none"/>
+  <rect x="12" y="12" width="296" height="376" rx="6" stroke="url(#goldArch)" stroke-width="1" stroke-dasharray="2 3" fill="none"/>
+
+  <!-- Mughal Scalloped Arch Contour -->
+  <!-- Peak at 160, 30. Then scallops down to 30, 130 and goes straight down to 360 -->
+  <path d="M 160 30 
+           C 170 42, 185 45, 192 56
+           C 200 68, 215 72, 222 86
+           C 230 100, 245 106, 252 122
+           C 258 136, 265 148, 265 165
+           L 265 355 
+           L 55 355 
+           L 55 165
+           C 55 148, 62 136, 68 122
+           C 75 106, 90 100, 98 86
+           C 105 72, 120 68, 128 56
+           C 135 45, 150 42, 160 30 Z" 
+        stroke="url(#goldArch)" stroke-width="2.5" fill="none"/>
+
+  <!-- Inner scalloped line -->
+  <path d="M 160 38 
+           C 168 48, 181 51, 187 61
+           C 194 72, 207 76, 213 88
+           C 220 101, 233 107, 239 121
+           C 244 133, 250 144, 250 160
+           L 250 345 
+           L 70 345 
+           L 70 160
+           C 70 144, 76 133, 81 121
+           C 87 107, 100 101, 107 88
+           C 113 76, 126 72, 133 61
+           C 139 51, 152 48, 160 38 Z" 
+        stroke="url(#goldArch)" stroke-width="1" stroke-opacity="0.7" fill="none"/>
+
+  <!-- Corner Ornamental Accents -->
+  <!-- Top Left -->
+  <path d="M 20 20 L 40 20 M 20 20 L 20 40" stroke="url(#goldArch)" stroke-width="1.5"/>
+  <circle cx="28" cy="28" r="2" fill="url(#goldArch)"/>
+
+  <!-- Top Right -->
+  <path d="M 300 20 L 280 20 M 300 20 L 300 40" stroke="url(#goldArch)" stroke-width="1.5"/>
+  <circle cx="292" cy="28" r="2" fill="url(#goldArch)"/>
+
+  <!-- Bottom Left -->
+  <path d="M 20 380 L 40 380 M 20 380 L 20 360" stroke="url(#goldArch)" stroke-width="1.5"/>
+  <circle cx="28" cy="372" r="2" fill="url(#goldArch)"/>
+
+  <!-- Bottom Right -->
+  <path d="M 300 380 L 280 380 M 300 380 L 300 360" stroke="url(#goldArch)" stroke-width="1.5"/>
+  <circle cx="292" cy="372" r="2" fill="url(#goldArch)"/>
+</svg>

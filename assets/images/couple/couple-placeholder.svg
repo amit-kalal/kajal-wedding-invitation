@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Romantic Sunset Courtyard Backdrop Gradient -->
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2a1236"/>
+      <stop offset="40%" stop-color="#5a2245"/>
+      <stop offset="70%" stop-color="#9a4348"/>
+      <stop offset="90%" stop-color="#d67b51"/>
+      <stop offset="100%" stop-color="#f5b878"/>
+    </linearGradient>
+
+    <!-- Royal Gold Gradient -->
+    <linearGradient id="goldHues" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff5cc"/>
+      <stop offset="40%" stop-color="#d4af37"/>
+      <stop offset="80%" stop-color="#8a5a00"/>
+    </linearGradient>
+
+    <!-- Palace Courtyard Pillars / Silhouette -->
+    <linearGradient id="palaceArch" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#14091a"/>
+      <stop offset="100%" stop-color="#26102f"/>
+    </linearGradient>
+
+    <!-- Marigold Varmala (Garland) -->
+    <radialGradient id="varmalaOrange" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFAE19"/>
+      <stop offset="100%" stop-color="#D84315"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="600" height="800" fill="url(#skyGrad)"/>
+
+  <!-- Glowing Sun / Palace Chandelier at center -->
+  <circle cx="300" cy="420" r="140" fill="#fff5cc" opacity="0.25"/>
+  <circle cx="300" cy="420" r="90" fill="#fff8e1" opacity="0.35"/>
+
+  <!-- Background Haveli Jharokhas & Mandap Arch Silhouette -->
+  <path d="M 0 800 L 0 250 C 40 250, 100 200, 150 180 C 220 150, 300 80, 300 80 C 300 80, 380 150, 450 180 C 500 200, 560 250, 600 250 L 600 800 Z" fill="url(#palaceArch)" opacity="0.65"/>
+
+  <!-- Foreground Elegant Silhouette of Indian Couple (Groom & Bride) -->
+  <!-- Groom (Left) with Royal Safa (Turban) & Sherwani -->
+  <!-- Bride (Right) with Maang Tikka, Chunni / Dupatta & Lehenga -->
+  <g id="coupleSilhouettes">
+    <!-- Groom Safa (Turban) & Feather Kalgi -->
+    <path d="M 235 345 C 220 340, 205 355, 205 380 C 205 405, 225 415, 245 415 C 265 415, 275 400, 275 375 C 275 350, 255 342, 235 345 Z" fill="#18071e"/>
+    <!-- Groom Kalgi Brooch -->
+    <path d="M 220 345 Q 210 315, 205 300 Q 215 320, 225 340 Z" fill="url(#goldHues)"/>
+
+    <!-- Groom Profile & Sherwani -->
+    <path d="M 245 415 C 235 435, 220 460, 200 480 C 180 505, 160 560, 150 640 L 140 800 L 300 800 L 300 520 C 290 490, 280 445, 265 425 Z" fill="#18071e"/>
+
+    <!-- Bride Head & Ornate Bridal Dupatta / Veil -->
+    <path d="M 335 375 C 335 350, 350 340, 370 345 C 390 350, 400 370, 400 395 C 400 425, 385 435, 365 435 C 345 435, 335 410, 335 375 Z" fill="#18071e"/>
+    <!-- Flowing Bridal Veil Silhouette draping back -->
+    <path d="M 370 345 C 410 360, 440 420, 455 510 C 470 600, 480 700, 490 800 L 290 800 C 290 730, 295 620, 310 520 C 320 470, 335 435, 345 420 Z" fill="#200a26"/>
+
+    <!-- Bridal Maang Tikka & Nath Jewelry Highlights -->
+    <circle cx="348" cy="370" r="3" fill="url(#goldHues)"/>
+    <line x1="365" y1="350" x2="350" y2="368" stroke="url(#goldHues)" stroke-width="1.5"/>
+
+    <!-- Romantic Varmala (Floral Garlands around their necks) -->
+    <!-- Groom Garland -->
+    <path d="M 210 475 Q 235 560, 255 580 Q 275 560, 285 490" stroke="url(#varmalaOrange)" stroke-width="9" stroke-linecap="round" fill="none"/>
+    <!-- Bride Garland -->
+    <path d="M 325 480 Q 345 560, 360 580 Q 380 560, 395 490" stroke="url(#varmalaOrange)" stroke-width="9" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- Golden Starlight & Sparkles -->
+  <g fill="#fff5cc">
+    <circle cx="120" cy="180" r="2"/>
+    <circle cx="480" cy="160" r="2.5"/>
+    <circle cx="220" cy="120" r="1.5"/>
+    <circle cx="380" cy="100" r="2"/>
+    <circle cx="160" cy="280" r="2"/>
+    <circle cx="440" cy="270" r="2"/>
+    <circle cx="530" cy="350" r="1.5"/>
+    <circle cx="80" cy="380" r="2"/>
+  </g>
+
+  <!-- Elegant Inner Border -->
+  <rect x="20" y="20" width="560" height="760" rx="8" stroke="url(#goldHues)" stroke-width="1.5" stroke-opacity="0.6"/>
+  <rect x="28" y="28" width="544" height="744" rx="6" stroke="url(#goldHues)" stroke-width="0.8" stroke-dasharray="3 4" stroke-opacity="0.4"/>
+</svg>

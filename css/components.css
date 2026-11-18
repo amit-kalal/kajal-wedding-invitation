@@ -1,0 +1,507 @@
+/* ==============================================================================
+   INTERACTIVE COMPONENTS: SCRATCH CARDS, COUNTDOWN, ITINERARY & RSVP
+   ============================================================================== */
+
+/* ==============================================================================
+   1. INTERACTIVE GOLD FOIL SCRATCH CARD
+   ============================================================================== */
+.scratch-section {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.scratch-instruction {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  letter-spacing: 2px;
+  color: var(--gold-deep);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-weight: 500;
+}
+
+.scratch-cards-grid {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 0 auto;
+}
+
+.scratch-card-box {
+  position: relative;
+  width: 105px;
+  height: 125px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  border: 2px solid var(--gold-pure);
+  background: #ffffff;
+  user-select: none;
+  touch-action: none;
+}
+
+/* Underlying revealed content */
+.scratch-revealed-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle, #fffdf8 0%, #faebd7 100%);
+  padding: 8px;
+}
+
+.scratch-label {
+  font-family: var(--font-sans);
+  font-size: 0.62rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.scratch-value {
+  font-family: var(--font-editorial);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--maroon);
+  line-height: 1;
+}
+
+.scratch-sublabel {
+  font-family: var(--font-serif);
+  font-size: 0.82rem;
+  color: var(--gold-deep);
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+/* Scratchable HTML5 Canvas overlay */
+.scratch-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  cursor: crosshair;
+  transition: opacity 0.5s ease;
+}
+
+.scratch-helper-btn {
+  margin-top: 12px;
+  background: none;
+  border: none;
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  text-decoration: underline;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+/* ==============================================================================
+   2. LIVE COUNTDOWN CLOCK
+   ============================================================================== */
+.countdown-section {
+  text-align: center;
+  padding: 16px 0;
+}
+
+.countdown-grid {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.countdown-item {
+  flex: 1;
+  max-width: 82px;
+  background: #ffffff;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-radius: 10px;
+  padding: 12px 6px;
+  box-shadow: var(--shadow-card);
+  position: relative;
+}
+
+.countdown-number {
+  font-family: var(--font-editorial);
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--maroon);
+  line-height: 1;
+  display: block;
+}
+
+.countdown-label {
+  font-family: var(--font-sans);
+  font-size: 0.58rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  font-weight: 600;
+  margin-top: 6px;
+  display: block;
+}
+
+/* ==============================================================================
+   3. CELEBRATION ITINERARY TIMELINE
+   ============================================================================== */
+.itinerary-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.event-card {
+  background: #ffffff;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-radius: 14px;
+  padding: 22px 20px;
+  box-shadow: var(--shadow-card);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(130, 91, 31, 0.12);
+}
+
+.event-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+  padding-bottom: 10px;
+  margin-bottom: 12px;
+}
+
+.event-card-title {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--maroon);
+}
+
+.event-card-hindi {
+  font-family: var(--font-hindi);
+  font-size: 1rem;
+  color: var(--gold-deep);
+}
+
+.event-detail-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+
+.event-detail-icon {
+  font-size: 1rem;
+  color: var(--gold-deep);
+  width: 18px;
+  text-align: center;
+}
+
+.event-description {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 12px 0 14px;
+  font-style: italic;
+}
+
+.event-dress-code {
+  display: inline-block;
+  background: var(--paper-tint);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  color: var(--gold-dark);
+  font-weight: 500;
+  margin-bottom: 14px;
+}
+
+.btn-add-calendar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  background: var(--gold-gradient-subtle);
+  border: 1px solid var(--gold-pure);
+  color: var(--text-primary);
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 9px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-add-calendar:hover {
+  background: var(--gold-gradient);
+  color: #3b2302;
+}
+
+/* ==============================================================================
+   4. VENUE & TRAVEL GUIDE
+   ============================================================================== */
+.venue-card {
+  background: #ffffff;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-radius: 14px;
+  padding: 24px 20px;
+  box-shadow: var(--shadow-card);
+  text-align: center;
+}
+
+.venue-name {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--maroon);
+  margin-bottom: 4px;
+}
+
+.venue-city {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  letter-spacing: 2px;
+  color: var(--gold-deep);
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.venue-address {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+.venue-travel-note {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  background: var(--paper-tint);
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-bottom: 18px;
+  line-height: 1.45;
+}
+
+.btn-open-maps {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  background: var(--gold-gradient);
+  color: #2b1702;
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 12px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.35);
+  transition: all 0.3s ease;
+}
+
+.btn-open-maps:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+}
+
+/* ==============================================================================
+   5. ZERO-BACKEND WHATSAPP RSVP FORM
+   ============================================================================== */
+.rsvp-card {
+  background: #ffffff;
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  border-radius: 14px;
+  padding: 24px 20px;
+  box-shadow: var(--shadow-card);
+}
+
+.form-group {
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.form-label {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-radius: 8px;
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  background-color: var(--paper-tint);
+  color: var(--text-primary);
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-input:focus {
+  border-color: var(--gold-deep);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+  background-color: #ffffff;
+}
+
+/* Attendance Radio Segment */
+.attendance-toggle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.attendance-option {
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  background: var(--paper-tint);
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.attendance-option.active {
+  background: #75141b;
+  border-color: #75141b;
+  color: #ffffff;
+}
+
+.attendance-option span {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  font-weight: 600;
+  display: block;
+}
+
+/* Guest Counter Stepper */
+.stepper-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--paper-tint);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-radius: 8px;
+  padding: 6px 14px;
+  width: fit-content;
+}
+
+.stepper-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--gold-pure);
+  background: #ffffff;
+  color: var(--gold-deep);
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.stepper-btn:hover {
+  background: var(--gold-gradient);
+  color: #3b2302;
+}
+
+.stepper-value {
+  font-family: var(--font-editorial);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--maroon);
+  min-width: 28px;
+  text-align: center;
+}
+
+/* Events Checklist */
+.events-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+  accent-color: var(--maroon);
+  width: 17px;
+  height: 17px;
+  cursor: pointer;
+}
+
+/* Green WhatsApp RSVP Action Button */
+.btn-whatsapp-rsvp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 14px 20px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.btn-whatsapp-rsvp:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+}
+
+.whatsapp-icon {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}

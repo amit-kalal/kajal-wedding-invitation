@@ -1,0 +1,497 @@
+/* ==============================================================================
+   KAJAL & ANMOL ROYAL WEDDING INVITATION — GLOBAL STYLES
+   ============================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Pinyon+Script&family=Tiro+Devanagari+Hindi:ital@0;1&family=Montserrat:wght@300;400;500;600&display=swap');
+
+:root {
+  /* Royal Color Palette */
+  --bg-deep: #0c1427;
+  --bg-darker: #060a14;
+  --paper: #fcf8f0;
+  --paper-card: #ffffff;
+  --paper-tint: #f6eedb;
+  --text-primary: #2c241d;
+  --text-secondary: #6e5e51;
+  --text-muted: #8c786a;
+  
+  /* Metallic Gold Palette */
+  --gold-pure: #d4af37;
+  --gold-light: #fdf3b8;
+  --gold-deep: #b38032;
+  --gold-dark: #825b1f;
+  --gold-gradient: linear-gradient(135deg, #fdf3b8 0%, #d4af37 40%, #b38032 80%, #f7e6a1 100%);
+  --gold-gradient-subtle: linear-gradient(135deg, rgba(253,243,184,0.15) 0%, rgba(212,175,55,0.25) 100%);
+  --gold-border: 1px solid rgba(212, 175, 55, 0.45);
+  
+  /* Indian Festive Accents */
+  --maroon: #75141b;
+  --sindoor: #931e24;
+  --marigold: #e88a07;
+  --haldi: #e5a910;
+  
+  /* Typography */
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-script: 'Pinyon Script', cursive;
+  --font-editorial: 'Bodoni Moda', 'Playfair Display', serif;
+  --font-hindi: 'Tiro Devanagari Hindi', serif;
+  --font-sans: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+  
+  /* Dimensions & Shadows */
+  --container-max-width: 460px;
+  --shadow-royal: 0 16px 40px rgba(0, 0, 0, 0.4);
+  --shadow-card: 0 8px 24px rgba(130, 91, 31, 0.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-darker);
+  color: var(--text-primary);
+  font-family: var(--font-serif);
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Ambient Canvas / Desktop Background */
+body {
+  background: radial-gradient(circle at 50% 20%, #15223f 0%, #0a1122 65%, #050810 100%);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+}
+
+/* The Mobile-First Luxury Keepsake Container */
+#appContainer {
+  width: 100%;
+  max-width: var(--container-max-width);
+  min-height: 100vh;
+  background-color: var(--paper);
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(212,175,55,0.08) 0%, transparent 60%),
+    linear-gradient(to bottom, #fcf8f0 0%, #f8f1e2 100%);
+  position: relative;
+  box-shadow: 0 0 70px rgba(0, 0, 0, 0.8), 0 0 20px rgba(212, 175, 55, 0.15);
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+/* Falling Petals Background Canvas */
+#petalsCanvas {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: var(--container-max-width);
+  height: 100%;
+  pointer-events: none;
+  z-index: 15;
+}
+
+/* ==============================================================================
+   REVEALED 2ND IMAGE LANDING HERO (Exact Seamless Match with Opening Video)
+   ============================================================================== */
+.courtyard-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 20px 30px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.courtyard-hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+}
+
+/* Overlay Typography Positioned Perfectly on the Sky / Arch Area of Courtyard */
+.courtyard-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  width: 100%;
+  max-width: 380px;
+  padding: 10px 10px 0;
+}
+
+.courtyard-mantra {
+  font-family: var(--font-hindi);
+  font-size: 1.35rem;
+  color: var(--gold-pure);
+  letter-spacing: 2px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8), 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+.courtyard-welcome-tag {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  letter-spacing: 3px;
+  color: #f7e7b5;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  font-weight: 600;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.85);
+}
+
+.courtyard-couple-names {
+  font-family: var(--font-serif);
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.05;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.9), 0 0 25px rgba(212, 175, 55, 0.5);
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+
+.courtyard-ampersand {
+  font-family: var(--font-script);
+  font-size: 2.8rem;
+  color: var(--gold-light);
+  display: inline-block;
+  margin: 0 4px;
+}
+
+.courtyard-date-badge {
+  display: inline-block;
+  font-family: var(--font-editorial);
+  font-size: 1.05rem;
+  letter-spacing: 2.5px;
+  color: var(--gold-pure);
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 5px 18px;
+  border-top: 1px solid rgba(212, 175, 55, 0.6);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.6);
+  margin-top: 6px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+  background: rgba(12, 20, 39, 0.4);
+  backdrop-filter: blur(4px);
+  border-radius: 4px;
+}
+
+.courtyard-venue-tag {
+  font-family: var(--font-serif);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #fdf5e6;
+  letter-spacing: 1.5px;
+  margin-top: 8px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+}
+
+/* Floating Bottom Scroll Hint Over the Reflection */
+.courtyard-bottom-action {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 10px;
+}
+
+.scroll-down-hint {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  color: #ffffff;
+  background: rgba(22, 10, 5, 0.75);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(212, 175, 55, 0.5);
+  padding: 8px 22px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+.scroll-down-hint:hover {
+  background: rgba(30, 15, 8, 0.9);
+  border-color: var(--gold-light);
+  transform: translateY(-2px);
+}
+
+.scroll-arrow {
+  font-size: 1.15rem;
+  color: var(--gold-pure);
+  animation: bounceDown 1.8s infinite ease-in-out;
+}
+
+@keyframes bounceDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(5px); }
+}
+
+/* Main Scrollable Content Area */
+#invitationPaper {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#invitationDetails {
+  padding: 30px 20px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+/* Sacred Ceremony & Holy Vows Feature Card */
+.ceremony-portrait-card {
+  position: relative;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  border: 1.5px solid var(--gold-pure);
+  background: var(--night-deep);
+  text-align: center;
+}
+
+.portrait-frame {
+  position: relative;
+  width: 100%;
+}
+
+.portrait-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.portrait-caption {
+  padding: 18px 16px 20px;
+  background: linear-gradient(to bottom, rgba(12, 20, 39, 0.95), rgba(12, 20, 39, 0.98));
+  border-top: 1px solid rgba(212, 175, 55, 0.4);
+}
+
+.portrait-mantra {
+  font-family: var(--font-hindi);
+  color: var(--gold-pure);
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.portrait-title {
+  font-family: var(--font-serif);
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.portrait-desc {
+  font-family: var(--font-sans);
+  color: #d8c6af;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+/* Royal Ornate Section Divider */
+.ornate-divider {
+  width: 100%;
+  max-width: 280px;
+  height: 32px;
+  margin: 4px auto;
+  display: block;
+  opacity: 0.85;
+}
+
+/* Section Header Typography */
+.section-tagline {
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+.section-title {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--maroon);
+  text-align: center;
+  line-height: 1.25;
+}
+
+.section-title-hindi {
+  font-family: var(--font-hindi);
+  font-size: 1.15rem;
+  color: var(--gold-deep);
+  text-align: center;
+  margin-top: -2px;
+  margin-bottom: 12px;
+}
+
+/* Formal Family Blessing Card */
+.family-blessing-card {
+  background: #ffffff;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 12px;
+  padding: 24px 18px;
+  box-shadow: var(--shadow-card);
+  text-align: center;
+  position: relative;
+}
+
+.family-blessing-card::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  border: 1px dashed rgba(212, 175, 55, 0.4);
+  border-radius: 9px;
+  pointer-events: none;
+}
+
+.family-welcome-quote {
+  font-family: var(--font-serif);
+  font-size: 1.08rem;
+  font-style: italic;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  padding: 0 8px;
+}
+
+.parents-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  border-top: 1px solid rgba(212, 175, 55, 0.25);
+  padding-top: 18px;
+}
+
+.parents-column {
+  text-align: center;
+}
+
+.parents-side-label {
+  font-family: var(--font-sans);
+  font-size: 0.62rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.parents-names {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.35;
+}
+
+.parents-relation {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* Couple Portrait / Jharokha Photo Frame */
+.photo-frame-container {
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+}
+
+.photo-arch-frame {
+  position: relative;
+  border-radius: 160px 160px 12px 12px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(117, 20, 27, 0.2);
+  border: 3px solid var(--gold-pure);
+  background: #11071a;
+  aspect-ratio: 4 / 5;
+}
+
+.couple-main-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.photo-caption {
+  font-family: var(--font-script);
+  font-size: 1.8rem;
+  color: var(--gold-deep);
+  margin-top: 10px;
+}
+
+/* Footer Section */
+.invitation-footer {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.footer-hashtag {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  letter-spacing: 2.5px;
+  color: var(--gold-dark);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.footer-blessing {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.footer-credit {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  color: var(--text-muted);
+  margin-top: 16px;
+  text-transform: uppercase;
+}

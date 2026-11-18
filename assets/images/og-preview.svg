@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" fill="none">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="ogBg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#182548"/>
+      <stop offset="60%" stop-color="#0e172e"/>
+      <stop offset="100%" stop-color="#080d1a"/>
+    </radialGradient>
+    <linearGradient id="ogGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff5cc"/>
+      <stop offset="35%" stop-color="#d4af37"/>
+      <stop offset="70%" stop-color="#aa771c"/>
+      <stop offset="100%" stop-color="#fdf3b8"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#ogBg)"/>
+
+  <!-- Ornate Golden Borders -->
+  <rect x="30" y="30" width="1140" height="570" rx="12" stroke="url(#ogGold)" stroke-width="2.5"/>
+  <rect x="42" y="42" width="1116" height="546" rx="8" stroke="url(#ogGold)" stroke-width="1" stroke-dasharray="3 4" stroke-opacity="0.6"/>
+
+  <!-- Corner Lotus Flourishes -->
+  <circle cx="50" cy="50" r="8" fill="url(#ogGold)"/>
+  <circle cx="1150" cy="50" r="8" fill="url(#ogGold)"/>
+  <circle cx="50" cy="580" r="8" fill="url(#ogGold)"/>
+  <circle cx="1150" cy="580" r="8" fill="url(#ogGold)"/>
+
+  <!-- Religious Invocation -->
+  <text x="600" y="110" font-family="'Tiro Devanagari Hindi', 'Georgia', serif" font-size="26" fill="url(#ogGold)" text-anchor="middle" letter-spacing="4">॥ श्री गणेशाय नमः ॥</text>
+
+  <text x="600" y="165" font-family="'Cormorant Garamond', 'Cinzel', serif" font-size="20" fill="#fdf3b8" text-anchor="middle" letter-spacing="8">ROYAL WEDDING INVITATION</text>
+
+  <!-- Couple Names -->
+  <text x="600" y="275" font-family="'Cormorant Garamond', 'Playfair Display', serif" font-size="76" font-weight="700" fill="url(#ogGold)" text-anchor="middle">Kajal &amp; Anmol</text>
+
+  <!-- Decorative Separator Line -->
+  <line x1="380" y1="315" x2="820" y2="315" stroke="url(#ogGold)" stroke-width="2"/>
+  <circle cx="600" cy="315" r="5" fill="url(#ogGold)"/>
+
+  <!-- Date -->
+  <text x="600" y="390" font-family="'Bodoni Moda', 'Playfair Display', serif" font-size="44" font-weight="600" fill="#fdf3b8" text-anchor="middle" letter-spacing="4">18 DECEMBER 2026</text>
+
+  <!-- Venue & City -->
+  <text x="600" y="445" font-family="'Cormorant Garamond', 'Georgia', serif" font-size="24" fill="#d4af37" text-anchor="middle" letter-spacing="3">VEERASHAIVA KALYANA MANTAP • ALNAVAR</text>
+
+  <!-- Action Subtitle -->
+  <rect x="420" y="495" width="360" height="52" rx="26" stroke="url(#ogGold)" stroke-width="1.8" fill="#152140"/>
+  <text x="600" y="528" font-family="'Cormorant Garamond', sans-serif" font-size="19" fill="#fdf3b8" text-anchor="middle" letter-spacing="2">✨ Tap to open the Royal Haveli Gate ✨</text>
+</svg>

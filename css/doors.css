@@ -1,0 +1,259 @@
+/* ==============================================================================
+   CINEMATIC VIDEO DOOR OPENING & 3-LAYER FILM ARCHITECTURE
+   (Exact implementation of the reference link's 60fps film engine)
+   ============================================================================== */
+
+/* Fixed Floating Audio Controller Pill */
+#audioController {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(12, 20, 39, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(212, 175, 55, 0.65);
+  padding: 6px 14px;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+#audioController:hover {
+  transform: scale(1.05);
+  border-color: var(--gold-light);
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);
+}
+
+.audio-label {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  font-weight: 500;
+}
+
+/* 3 Equalizer Wave Bars */
+.eq-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 14px;
+}
+
+.eq-bar {
+  width: 2.5px;
+  background: var(--gold-pure);
+  border-radius: 2px;
+  height: 4px;
+  transition: height 0.2s ease;
+}
+
+#audioController.playing .eq-bar:nth-child(1) {
+  animation: eqBounce 0.9s infinite ease-in-out alternate;
+}
+#audioController.playing .eq-bar:nth-child(2) {
+  animation: eqBounce 0.7s infinite ease-in-out alternate 0.2s;
+}
+#audioController.playing .eq-bar:nth-child(3) {
+  animation: eqBounce 1.1s infinite ease-in-out alternate 0.4s;
+}
+
+@keyframes eqBounce {
+  0% { height: 3px; }
+  100% { height: 14px; }
+}
+
+/* ==============================================================================
+   GATE OVERLAY & 9:16 FILM STAGE (Saath Studio Engine)
+   ============================================================================== */
+.gate {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #10192e;
+  overflow: hidden;
+  opacity: 1;
+  transition: opacity 800ms ease;
+  user-select: none;
+}
+
+.gate.gone {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Stage Container centered on desktop, fluid on mobile */
+.stage {
+  position: relative;
+  width: 100%;
+  max-width: var(--container-max-width);
+  height: 100vh;
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.op-frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 9 / 16;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* 1. Video Layer (Bottom) */
+.op-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* 2. End Frame Still (Middle - revealed when video completes) */
+.op-end {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0;
+  transition: opacity 400ms ease;
+  pointer-events: none;
+}
+
+.op-end.on {
+  opacity: 1;
+}
+
+/* 3. First Frame Still (Top - sits above video to avoid any black frame flash) */
+.op-still {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 1;
+  transition: opacity 160ms linear;
+  pointer-events: none;
+}
+
+.op-still.gone {
+  opacity: 0;
+}
+
+/* ==============================================================================
+   LAYER 4: CLEAN 1ST PAGE OVERLAY (Matching User Specification)
+   ============================================================================== */
+.gate-ui-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 30;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 55px 20px 48px;
+  pointer-events: none;
+  transition: opacity 350ms ease, transform 350ms ease;
+}
+
+.gate.opening .gate-ui-overlay {
+  opacity: 0;
+  transform: scale(0.96);
+}
+
+/* Top Greeting: "You are invited to the wedding at Alnavar" */
+.gate-top-greet {
+  text-align: center;
+  pointer-events: none;
+  max-width: 90%;
+}
+
+.gate-invite-text {
+  font-family: var(--font-serif);
+  font-size: 2.3rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.95), 0 0 25px rgba(0, 0, 0, 0.8);
+  line-height: 1.15;
+  letter-spacing: 0.5px;
+}
+
+.gate-venue-sub {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  font-weight: 600;
+  margin-top: 6px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95);
+}
+
+/* Bottom Action: "Tap the door to open" */
+.gate-bottom-action {
+  pointer-events: auto;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.gate-tap-prompt {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(14, 8, 4, 0.82);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(212, 175, 55, 0.7);
+  color: #ffffff;
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 12px 30px;
+  border-radius: 40px;
+  cursor: pointer;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.65), 0 0 15px rgba(212, 175, 55, 0.3);
+  transition: all 0.3s ease;
+  animation: pulseTapPrompt 2.2s infinite ease-in-out;
+}
+
+.gate-tap-prompt:hover {
+  background: rgba(26, 14, 7, 0.95);
+  border-color: var(--gold-light);
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 8px 30px rgba(212, 175, 55, 0.5);
+}
+
+.tap-sparkle {
+  font-size: 1.1rem;
+  color: var(--gold-pure);
+}
+
+@keyframes pulseTapPrompt {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.65), 0 0 12px rgba(212, 175, 55, 0.25);
+  }
+  50% {
+    transform: scale(1.04);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.75), 0 0 22px rgba(212, 175, 55, 0.55);
+  }
+}

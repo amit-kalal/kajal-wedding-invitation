@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 60" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="goldDiv" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#b38032" stop-opacity="0"/>
+      <stop offset="25%" stop-color="#d4af37" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#fdf3b8" stop-opacity="1"/>
+      <stop offset="75%" stop-color="#d4af37" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#b38032" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="centerGem" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff5cc"/>
+      <stop offset="50%" stop-color="#d4af37"/>
+      <stop offset="100%" stop-color="#8a5a00"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Left Vine -->
+  <path d="M 60 30 C 120 30, 160 20, 200 30 C 220 35, 240 22, 270 30" stroke="url(#goldDiv)" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <!-- Left accent curls -->
+  <path d="M 170 28 C 175 22, 185 22, 187 26 C 189 30, 182 34, 175 32" stroke="url(#goldDiv)" stroke-width="1.2" fill="none"/>
+  <circle cx="215" cy="27" r="2.5" fill="#d4af37"/>
+  <circle cx="245" cy="32" r="3" fill="#fdf3b8"/>
+
+  <!-- Right Vine -->
+  <path d="M 540 30 C 480 30, 440 20, 400 30 C 380 35, 360 22, 330 30" stroke="url(#goldDiv)" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <!-- Right accent curls -->
+  <path d="M 430 28 C 425 22, 415 22, 413 26 C 411 30, 418 34, 425 32" stroke="url(#goldDiv)" stroke-width="1.2" fill="none"/>
+  <circle cx="385" cy="27" r="2.5" fill="#d4af37"/>
+  <circle cx="355" cy="32" r="3" fill="#fdf3b8"/>
+
+  <!-- Center Mandala Lotus Motifs -->
+  <g transform="translate(300, 30)">
+    <!-- Central Diamond Gem -->
+    <path d="M 0 -14 L 14 0 L 0 14 L -14 0 Z" fill="url(#centerGem)" stroke="#fdf3b8" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="4" fill="#ffffff" opacity="0.8"/>
+    
+    <!-- Petals around gem -->
+    <path d="M 0 -14 C -8 -22, -18 -12, -14 0 C -18 12, -8 22, 0 14 C 8 22, 18 12, 14 0 C 18 -12, 8 -22, 0 -14 Z" stroke="#d4af37" stroke-width="1.2" fill="none"/>
+    <circle cx="-22" cy="0" r="3" fill="#d4af37"/>
+    <circle cx="22" cy="0" r="3" fill="#d4af37"/>
+    <circle cx="0" cy="-22" r="2.5" fill="#d4af37"/>
+    <circle cx="0" cy="22" r="2.5" fill="#d4af37"/>
+  </g>
+</svg>

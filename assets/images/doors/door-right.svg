@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 800" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Rich Sheesham/Teak Wood Gradient -->
+    <linearGradient id="woodBaseRight" x1="100%" y1="0%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#1e0f07"/>
+      <stop offset="25%" stop-color="#3b1d0e"/>
+      <stop offset="60%" stop-color="#2a1409"/>
+      <stop offset="100%" stop-color="#180b05"/>
+    </linearGradient>
+
+    <!-- Inset Panel Wood -->
+    <radialGradient id="woodPanelRight" cx="50%" cy="50%" r="65%">
+      <stop offset="0%" stop-color="#4a2513"/>
+      <stop offset="80%" stop-color="#291309"/>
+      <stop offset="100%" stop-color="#140803"/>
+    </radialGradient>
+
+    <!-- Antique Brass Gradient -->
+    <linearGradient id="brassRight" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fdf4ba"/>
+      <stop offset="25%" stop-color="#d4af37"/>
+      <stop offset="65%" stop-color="#8a5a00"/>
+      <stop offset="90%" stop-color="#e8cd78"/>
+      <stop offset="100%" stop-color="#5a3a00"/>
+    </linearGradient>
+
+    <radialGradient id="brassStudRight" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#fff8d6"/>
+      <stop offset="45%" stop-color="#d4af37"/>
+      <stop offset="85%" stop-color="#734b00"/>
+      <stop offset="100%" stop-color="#2b1c00"/>
+    </radialGradient>
+
+    <filter id="shadowRight" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="-2" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Door Base -->
+  <rect x="0" y="0" width="250" height="800" fill="url(#woodBaseRight)"/>
+  
+  <!-- Outer Wood Frame Planks -->
+  <rect x="12" y="12" width="226" height="776" stroke="#120703" stroke-width="4" fill="none"/>
+  <rect x="16" y="16" width="218" height="768" stroke="#522b16" stroke-width="2" stroke-opacity="0.5" fill="none"/>
+
+  <!-- Top Inset Panel (Jharokha Arch Carving) -->
+  <g transform="translate(24, 30)">
+    <rect x="0" y="0" width="202" height="210" rx="6" fill="url(#woodPanelRight)" stroke="#150803" stroke-width="3"/>
+    <rect x="4" y="4" width="194" height="202" rx="4" stroke="url(#brassRight)" stroke-width="1.2" stroke-opacity="0.7"/>
+    <!-- Carved Jali / Lattice Arch -->
+    <path d="M 101 25 C 120 45, 175 60, 175 110 L 175 190 L 27 190 L 27 110 C 27 60, 82 45, 101 25 Z" stroke="url(#brassRight)" stroke-width="2" fill="none"/>
+    <path d="M 101 35 C 115 52, 163 65, 163 110 L 163 180 L 39 180 L 39 110 C 39 65, 87 52, 101 35 Z" stroke="url(#brassRight)" stroke-width="1" stroke-dasharray="2 3" fill="none"/>
+    <!-- Center Carved Lotus in Top Panel -->
+    <circle cx="101" cy="115" r="28" stroke="url(#brassRight)" stroke-width="1.5" stroke-dasharray="3 3"/>
+    <circle cx="101" cy="115" r="16" fill="url(#brassStudRight)"/>
+  </g>
+
+  <!-- Middle Inset Panel (Brass Handle & Plate Zone) -->
+  <g transform="translate(24, 270)">
+    <rect x="0" y="0" width="202" height="250" rx="6" fill="url(#woodPanelRight)" stroke="#150803" stroke-width="3"/>
+    <rect x="4" y="4" width="194" height="242" rx="4" stroke="url(#brassRight)" stroke-width="1.2" stroke-opacity="0.7"/>
+    <!-- Traditional Diamond Grid Carving -->
+    <line x1="20" y1="20" x2="182" y2="230" stroke="url(#brassRight)" stroke-width="0.8" stroke-opacity="0.4"/>
+    <line x1="182" y1="20" x2="20" y2="230" stroke="url(#brassRight)" stroke-width="0.8" stroke-opacity="0.4"/>
+    <line x1="20" y1="125" x2="182" y2="125" stroke="url(#brassRight)" stroke-width="0.8" stroke-opacity="0.4"/>
+    <line x1="101" y1="20" x2="101" y2="230" stroke="url(#brassRight)" stroke-width="0.8" stroke-opacity="0.4"/>
+    <circle cx="101" cy="125" r="40" stroke="url(#brassRight)" stroke-width="1.2" fill="none"/>
+
+    <!-- Right Door Heavy Brass Latch Plate (on left edge of panel) -->
+    <g transform="translate(11, 75)" filter="url(#shadowRight)">
+      <rect x="0" y="0" width="46" height="100" rx="6" fill="url(#brassRight)" stroke="#5a3a00" stroke-width="2"/>
+      <circle cx="23" cy="18" r="4" fill="url(#brassStudRight)"/>
+      <circle cx="23" cy="82" r="4" fill="url(#brassStudRight)"/>
+      <!-- Brass Lion/Floral Boss -->
+      <circle cx="23" cy="45" r="15" fill="url(#brassRight)" stroke="#ffe599" stroke-width="1.5"/>
+      <!-- Heavy Hanging Brass Ring Handle -->
+      <circle cx="23" cy="62" r="18" stroke="url(#brassRight)" stroke-width="7" fill="none"/>
+      <circle cx="23" cy="62" r="18" stroke="#331c00" stroke-width="1" fill="none"/>
+    </g>
+  </g>
+
+  <!-- Bottom Inset Panel (Mughal Floral Carvings) -->
+  <g transform="translate(24, 550)">
+    <rect x="0" y="0" width="202" height="210" rx="6" fill="url(#woodPanelRight)" stroke="#150803" stroke-width="3"/>
+    <rect x="4" y="4" width="194" height="202" rx="4" stroke="url(#brassRight)" stroke-width="1.2" stroke-opacity="0.7"/>
+    <!-- Bottom Arch -->
+    <path d="M 101 30 C 120 48, 175 65, 175 180 L 27 180 C 27 65, 82 48, 101 30 Z" stroke="url(#brassRight)" stroke-width="1.5" fill="none"/>
+    <circle cx="101" cy="105" r="22" stroke="url(#brassRight)" stroke-width="1.2" stroke-dasharray="2 3"/>
+    <circle cx="101" cy="105" r="10" fill="url(#brassStudRight)"/>
+  </g>
+
+  <!-- Heavy Brass Studs (Pyramid Nails / Gulmekh) on Door Borders -->
+  <g>
+    <!-- Right Border Studs -->
+    <circle cx="230" cy="40" r="6" fill="url(#brassStudRight)"/>
+    <circle cx="230" cy="140" r="6" fill="url(#brassStudRight)"/>
+    <circle cx="230" cy="245" r="6" fill="url(#brassStudRight)"/>
+    <circle cx="230" cy="395" r="6" fill="url(#brassStudRight)"/>
+    <circle cx="230" cy="535" r="6" fill="url(#brassStudRight)"/>
+    <circle cx="230" cy="660" r="6" fill="url(#brassStudRight)"/>
+    <circle cx="230" cy="760" r="6" fill="url(#brassStudRight)"/>
+
+    <!-- Left Border Studs -->
+    <circle cx="15" cy="40" r="6" fill="url(#brassStudRight)"/>
+    <circle cx="15" cy="140" r="6" fill="url(#brassStudRight)"/>
+    <circle cx="15" cy="245" r="6" fill="url(#brassStudRight)"/>
+    <circle cx="15" cy="535" r="6" fill="url(#brassStudRight)"/>
+    <circle cx="15" cy="660" r="6" fill="url(#brassStudRight)"/>
+    <circle cx="15" cy="760" r="6" fill="url(#brassStudRight)"/>
+  </g>
+
+  <!-- Left Edge Brass Central Strip (Astragal Overlap) -->
+  <rect x="0" y="0" width="6" height="800" fill="url(#brassRight)"/>
+</svg>
