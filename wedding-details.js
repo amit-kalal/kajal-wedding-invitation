@@ -293,3 +293,139 @@ window.SAATH = {
   api: null,
   familyKey: null
 };
+
+
+// Embedded theme configuration for 100% offline & file:// protocol compatibility
+window.SAATH_THEME = {
+  "layout": "keepsake",
+  "id": "jharokha-film",
+  "name": "Jharokha Film",
+  "line": "Jharokha as a film: the carved haveli doors swing open and your guests walk into a courtyard lit with diyas.",
+  "story": "In Rajasthan's old merchant towns, Marwari families built havelis around open courtyards, with carved wooden doors on the street and jharokhas, screened stone balconies, above it. A Rajasthani wedding begins at such a door: before the groom is welcomed in, he touches the toran hung over the bride's entrance. Jharokha draws on that architecture and on the miniature painting of the Mewar and Kishangarh courts, gouache and gold on layered wasli paper.",
+  "palette": {
+    "ink": "#2B1B17",
+    "paper": "#EFDEBF",
+    "accent": "#B3261E",
+    "accent2": "#E8891C",
+    "gold": "#C2933F",
+    "night": "#1D2347"
+  },
+  "fonts": {
+    "script": "Pinyon Script",
+    "serif": "Cormorant Garamond",
+    "deva": "Tiro Devanagari Hindi",
+    "display": "Bodoni Moda"
+  },
+  "moods": {
+    "haldi": {
+      "accent": "#E9A61C",
+      "paper": "#F7E7B5"
+    },
+    "mehendi": {
+      "accent": "#5B7B2F",
+      "paper": "#F3E3D8"
+    },
+    "sangeet": {
+      "accent": "#D6457A",
+      "paper": "#1D2347",
+      "ink": "#EFDEBF"
+    },
+    "wedding": {
+      "accent": "#B3261E",
+      "paper": "#F2DFC4"
+    },
+    "reception": {
+      "accent": "#C2933F",
+      "paper": "#F5EFE4"
+    }
+  },
+  "opening": {
+    "type": "keepsake",
+    "gesture": "doors",
+    "film": "opening.mp4",
+    "first": "opening-first.webp",
+    "last": "opening-last.webp",
+    "aspect": "9 / 16",
+    "focus": [
+      0.12,
+      0.15,
+      0.88,
+      0.92
+    ],
+    "tap": [
+      0.15,
+      0.2,
+      0.85,
+      0.88
+    ],
+    "from": 0.3,
+    "rate": 1.25,
+    "writeAt": 8.2,
+    "names": {
+      "left": 0.17,
+      "top": 0.06,
+      "right": 0.83,
+      "bottom": 0.235
+    },
+    "tone": "light",
+    "hint": {
+      "en": "Tap the doors to open",
+      "hi": "खोलने के लिए दरवाज़े छुएँ"
+    },
+    "filmNote": "Jharokha as a film, a Royal design beside the Premium Jharokha (Gautam, 31 Oct 2026): photoreal carved haveli doors open and the camera walks into a courtyard lit with diyas (Flow: Nano Banana keyframes jharokha-k0/k1, a Veo 3.1 Fast clip, the film's own first and last frames). Its page art is Jharokha's own (picks.json points at ../jharokha).",
+    "edge": {
+      "top": "#855c45",
+      "bottom": "#a15f38"
+    }
+  },
+  "art": {
+    "closed": "closed.webp",
+    "hero": "hero.webp",
+    "paper": "paper.webp",
+    "frame": "frame.webp",
+    "divider": "divider.webp",
+    "corner": "corner.webp",
+    "motif": "motif.webp",
+    "frameZone": {
+      "left": 0.17,
+      "top": 0.26,
+      "right": 0.83,
+      "bottom": 0.83
+    },
+    "heroCouple": null,
+    "cardHero": {
+      "file": "closed.webp",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "fn": {
+      "haldi": "fn-haldi.webp",
+      "mehendi": "fn-mehendi.webp",
+      "sangeet": "fn-sangeet.webp",
+      "wedding": "fn-wedding.webp",
+      "reception": "fn-reception.webp"
+    },
+    "venue": "venue.webp",
+    "dress": "dress.webp",
+    "scenes": {
+      "invite": {
+        "file": "scene-invite.webp",
+        "corners": null
+      },
+      "welcome": {
+        "file": "scene-welcome.webp",
+        "corners": null
+      },
+      "table": {
+        "file": "scene-table.webp",
+        "corners": null
+      },
+      "favour": {
+        "file": "scene-favour.webp",
+        "corners": null
+      }
+    }
+  }
+};

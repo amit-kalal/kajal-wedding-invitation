@@ -590,14 +590,21 @@
     if (SAATH.draft || params.has("draft")) { try { draft = JSON.parse(localStorage.getItem("saath-draft") || "null"); } catch {} }
     data = tidy(draft || SAATH.data || (await (await fetch(`${ROOT}couples/${slug}/invite.json`)).json()));
     let themeId = (params.get("t") || data.theme || "jharokha").replace(/[^a-z0-9-]/gi, "");
-    let res = await fetch(`${ROOT}themes/${themeId}/theme.json`);
-    // A collection that isn't built yet falls back to the first one that is.
-    if (!res.ok) {
-      try { themeId = (await (await fetch(`${ROOT}themes/index.json`)).json())[0].id; } catch { themeId = "jharokha"; }
-      res = await fetch(`${ROOT}themes/${themeId}/theme.json`);
+    let themeObj = window.SAATH_THEME || SAATH.themeData;
+    if (!themeObj) {
+      try {
+        let res = await fetch(`${ROOT}themes/${themeId}/theme.json`);
+        if (!res.ok) {
+          try { themeId = (await (await fetch(`${ROOT}themes/index.json`)).json())[0].id; } catch { themeId = "jharokha"; }
+          res = await fetch(`${ROOT}themes/${themeId}/theme.json`);
+        }
+        themeObj = await res.json();
+      } catch (e) {
+        console.warn("Theme fetch bypassed:", e);
+      }
     }
     base = `${ROOT}themes/${themeId}/`;
-    theme = await res.json();
+    theme = themeObj || {};
     // The couple's own lettering (data.fonts, LETTERING in lib/wedding.ts, 14 November 2026): a script
     // for the names and headings in place of the design's, and capitals for the small lines (--caps).
     // Set into the theme's fonts, so the seal (openings.js) and the layouts follow it too.
