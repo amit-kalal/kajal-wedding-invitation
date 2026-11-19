@@ -274,7 +274,7 @@ window.SAATH = {
     // --------------------------------------------------------------------------
     music: "assets/audio/shehnai-theme.mp3",
     song: {
-      url: "https://open.spotify.com/search/Judi%20Jodi%20Ramayana",
+      url: "https://open.spotify.com/track/01f30LJ0lcCbO152FJIxSU",
       cover: "assets/images/couple/song-cover.jpg",
       title: {
         en: "Jodi Jodi (Ramayan)",
