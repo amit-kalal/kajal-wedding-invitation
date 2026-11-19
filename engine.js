@@ -1770,7 +1770,9 @@
     let src = null;
     const yt = url.match(/(?:youtu\.be\/|v=|shorts\/)([\w-]{11})/);
     const sp = url.match(/open\.spotify\.com\/(track|album|playlist)\/(\w+)/);
-    if (yt) src = `https://www.youtube-nocookie.com/embed/${yt[1]}?autoplay=1`;
+    const startMatch = url.match(/[?&](?:t|start)=(\d+)/);
+    const startParam = startMatch ? `&start=${startMatch[1]}` : "";
+    if (yt) src = `https://www.youtube-nocookie.com/embed/${yt[1]}?autoplay=1${startParam}`;
     else if (sp) src = `https://open.spotify.com/embed/${sp[1]}/${sp[2]}?theme=0`;
     if (!src) return window.open(url, "_blank", "noopener");
     const a = $("#music");
